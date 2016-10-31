@@ -3,11 +3,10 @@
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-.slide1 {
-  background: url(https://bertoost.com/assets/images/header-2-bg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.section {
   color: #FFF;
+}
+
+.slide1 {
+  background: #2980b9;
 }
