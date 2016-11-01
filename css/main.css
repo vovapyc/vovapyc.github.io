@@ -17,12 +17,20 @@ h1 {
   font-family: 'Raleway', sans-serif;
 }
 
+h4 {
+  line-height: 150%;
+}
+
 .section {
   color: #FFF;
 }
 
 .slide1 {
   background: #2980b9;
+}
+
+.slide2 {
+  background: #c0392b;
 }
 
 .slide4 {
@@ -42,4 +50,10 @@ h1 {
 .socialButt:hover img {
   border: 5px solid #FFF;
   transition: 0.2s;
+}
+
+#avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
 }
