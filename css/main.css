@@ -4,6 +4,15 @@
   font-family: 'Varela Round', sans-serif;
 }
 
+a {
+  color: #FFF;
+}
+
+a:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+
 h1 {
   font-family: 'Raleway', sans-serif;
 }
@@ -14,4 +23,22 @@ h1 {
 
 .slide1 {
   background: #2980b9;
+}
+
+.slide4 {
+  background: #464646;
+}
+
+.socialButt img {
+  width: 80px;
+  border-radius: 100%;
+  padding: 10px;
+  border: 2px solid #FFF;
+  margin: 5px;
+  transition: 0.2s;
+}
+
+.socialButt:hover img {
+  border: 5px solid #FFF;
+  transition: 0.2s;
 }
