@@ -89,18 +89,35 @@ h4 {
   color: #c0392b;
 }
 
-#tv_container {
+#tv_container_nexus {
   display: inline-block;
   background: url('../img/nexus.png') no-repeat top left transparent;
   width: 206px;
   height: 348px;
   position: relative;
 }
-#tv_container video {
+
+#tv_container_nexus video {
   position: absolute;
   top: 53px;
   left: 37px;
   width: 133px;
+}
+
+#tv_container_ipad {
+  display: inline-block;
+  background: url('../img/ipad.png') no-repeat top left transparent;
+  width: 445px;
+  height: 348px;
+  position: relative;
+}
+
+#tv_container_ipad video {
+  border: 1px solid #000;
+  position: absolute;
+  top: 27px;
+  left: 48px;
+  width: 346px;
 }
 
 .btn {

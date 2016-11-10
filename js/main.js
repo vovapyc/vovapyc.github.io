@@ -4,6 +4,7 @@ $(document).ready(function() {
       //playing the video
       $('video').get(0).play();
       $('video').get(1).play();
+      $('video').get(2).play();
     }
 });
 });
