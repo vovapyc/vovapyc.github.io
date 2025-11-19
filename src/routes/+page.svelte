@@ -2,6 +2,8 @@
 	import Card from '$lib/components/Card.svelte';
     import WorkExperience from '$lib/components/WorkExperience.svelte';
     import WorkExperiences from '$lib/components/WorkExperiences.svelte';
+	import Project from '$lib/components/Project.svelte';
+	import Projects from '$lib/components/Projects.svelte';
 	import videoMe from '$lib/assets/me.mov';
 	import Link from '$lib/components/Link.svelte';
 </script>
@@ -30,6 +32,23 @@
 	</p>
 	<p>Also I hold a <b>Master's in Computer Science</b> from Vasyl Stefanyk PNU (🇺🇦)</p>
 </Card>
+
+<Projects>
+	<Project
+		emoji="🥔"
+		title="Potato Classifier"
+		description="ML-powered app that identifies potatos. Because why not make something fun while practicing computer vision? I did engineering, my gf did computer vision part."
+		tech={['FastAPI', 'React']}
+		href="https://byvova.com/potato/"
+	/>
+	<Project
+		emoji="🕊️"
+		title="Artists Boycott russia"
+		description="Public database tracking artists who perform in russia after the invasion of Ukraine. Built to help people make informed decisions about who they support."
+		tech={['SvelteKit', 'Python']}
+		href="https://projects.byvova.com/nowar/en"
+	/>
+</Projects>
 
 <WorkExperiences>
     <WorkExperience company="DeviantArt (Vancouver, Canada)" period="2022 - present">
