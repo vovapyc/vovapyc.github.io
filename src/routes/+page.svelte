@@ -14,7 +14,7 @@
 	</div>
 	<div class="basis-2/3 self-center">
 		<h1 class="text-2xl font-black leading-loose">👋🏻 Hi, I'm Vova</h1>
-		<p class="leading-relaxed">
+		<p class="text-sm md:text-base leading-relaxed">
 			I'm based in Vancouver(🇨🇦)
 			<br />I do big data, applied ML and backend engineering
 		</p>

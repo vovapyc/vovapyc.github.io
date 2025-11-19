@@ -7,11 +7,11 @@
 	<div
 		class="absolute w-3 h-3 bg-gray-200 dark:bg-gray-400 rounded-full mt-1.5 -start-1.5 border border-white dark:border-[#1a1a1a]"
 	></div>
-	<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-400">{period}</time>
-	<h3 class="text-lg font-semibold mb-1">
+	<time class="mb-1 text-sm md:text-sm font-normal leading-none text-gray-400 dark:text-gray-400">{period}</time>
+	<h3 class="text-base md:text-lg font-semibold mb-1">
 		{company}
 	</h3>
-	<div class="text-base font-normal space-y-3">
+	<div class="text-sm md:text-base font-normal space-y-3">
 		<slot />
 	</div>
 </li>
