@@ -23,14 +23,14 @@
 
 <Card title="💁‍♂️ About me">
 	<p>
-		I’ve built APIs and full-stack applications, trained machine learning models, worked with big
-		data, designed trading algorithms, and architected scalable cloud infrastructure
+		During my career, I've built trading algorithms, architected cloud infrastructure, developed high-load services handling many requests per second, trained ML models, and built frontends
 	</p>
 	<p>
-		My core stack includes <b>Python</b>, <b>AWS</b>, <b>FastAPI</b>, and <b>Docker</b> delivering efficient,
-		cloud-driven solutions
+		In my free time, I build and design indie apps
 	</p>
-	<p>Also I hold a <b>Master's in Computer Science</b> from Vasyl Stefanyk PNU (🇺🇦)</p>
+	<p>
+		Also, I hold a Master's in Computer Science from Vasyl Stefanyk PNU(🇺🇦)
+	</p>
 </Card>
 
 <Projects>
