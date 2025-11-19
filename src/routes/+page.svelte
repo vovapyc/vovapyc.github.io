@@ -15,8 +15,8 @@
 	<div class="basis-2/3 self-center">
 		<h1 class="text-2xl font-black leading-loose">👋🏻 Hi, I'm Vova</h1>
 		<p class="text-sm md:text-base leading-relaxed">
-			I'm based in Vancouver(🇨🇦)
-			<br />I do big data, applied ML and backend engineering
+			🇨🇦 Based in Vancouver
+			<br />Work for DeviantArt, ship my own projects
 		</p>
 	</div>
 </div>
