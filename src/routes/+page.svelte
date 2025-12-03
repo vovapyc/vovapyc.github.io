@@ -39,7 +39,7 @@
 		title="Potato Classifier"
 		description="ML-powered app that identifies potatos. Because why not make something fun while practicing computer vision? I did engineering, my gf did computer vision part."
 		tech={['FastAPI', 'React']}
-		href="https://byvova.com/potato/"
+		href="https://projects.byvova.com/potato/"
 	/>
 	<Project
 		emoji="🕊️"
