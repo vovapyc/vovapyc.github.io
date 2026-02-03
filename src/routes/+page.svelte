@@ -42,18 +42,18 @@
 		href="https://apps.apple.com/ca/app/my-days-in-canada/id6758373830"
 	/>
 	<Project
-		emoji="🥔"
-		title="Potato Classifier"
-		description="ML-powered app that identifies potatos. Because why not make something fun while practicing computer vision? I did engineering, my gf did computer vision part."
-		tech={['FastAPI', 'React']}
-		href="https://projects.byvova.com/potato/"
-	/>
-	<Project
 		emoji="🕊️"
 		title="Artists Boycott russia"
 		description="Public database tracking artists who perform in russia after the invasion of Ukraine. Built to help people make informed decisions about who they support."
 		tech={['SvelteKit', 'Python']}
 		href="https://projects.byvova.com/nowar/en"
+	/>
+	<Project
+		emoji="🥔"
+		title="Potato Classifier"
+		description="ML-powered app that identifies potatos. Because why not make something fun while practicing computer vision? I did engineering, my gf did computer vision part."
+		tech={['FastAPI', 'React']}
+		href="https://projects.byvova.com/potato/"
 	/>
 </Projects>
 
