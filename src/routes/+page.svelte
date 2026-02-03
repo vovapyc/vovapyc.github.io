@@ -35,6 +35,13 @@
 
 <Projects>
 	<Project
+		emoji="🍁"
+		title="My Days in Canada"
+		description="iOS app to track physical presence in Canada for citizenship eligibility, log trips, and optionally scan photos for travel dates — all data stays on-device/iCloud."
+		tech={['Swift']}
+		href="https://apps.apple.com/ca/app/my-days-in-canada/id6758373830"
+	/>
+	<Project
 		emoji="🥔"
 		title="Potato Classifier"
 		description="ML-powered app that identifies potatos. Because why not make something fun while practicing computer vision? I did engineering, my gf did computer vision part."
