@@ -7,7 +7,7 @@
 	<div>
 		<h1 class="text-3xl font-bold mb-1">Privacy Policy</h1>
 		<p class="text-sm opacity-60">Canada Days — iOS App</p>
-		<p class="text-sm opacity-60">Last updated: January 30, 2026</p>
+		<p class="text-sm opacity-60">Last updated: February 10, 2026</p>
 	</div>
 
 	<div>
@@ -20,8 +20,8 @@
 
 	<div>
 		<h2 class="text-xl font-semibold mb-2">Data Collection</h2>
-		<p>Canada Days does <strong>not</strong> collect, transmit, or share any personal data with the developer or third parties.</p>
-		<p class="mt-2">All data stays on your device and, if enabled, in your personal iCloud account.</p>
+		<p>Canada Days does <strong>not</strong> collect, transmit, or share any personally identifiable data with the developer.</p>
+		<p class="mt-2">All user-entered data stays on your device and, if enabled, in your personal iCloud account. The app collects anonymous usage analytics as described below.</p>
 	</div>
 
 	<div>
@@ -48,12 +48,21 @@
 
 	<div>
 		<h2 class="text-xl font-semibold mb-2">Analytics & Tracking</h2>
-		<p>The app does not include any analytics, tracking, or advertising frameworks.</p>
+		<p>The app uses <a class="underline decoration-dotted" href="https://posthog.com">PostHog</a> to collect anonymous usage analytics. This helps understand how the app is used and improve it.</p>
+		<ul class="list-disc list-inside ml-2 mt-2 space-y-1">
+			<li>Analytics are <strong>anonymous</strong> — no names, emails, or personally identifiable information is collected</li>
+			<li>Only basic events are tracked (e.g. completing onboarding, adding a trip)</li>
+			<li>No advertising frameworks or ad tracking are used</li>
+		</ul>
 	</div>
 
 	<div>
 		<h2 class="text-xl font-semibold mb-2">Third-Party Services</h2>
-		<p>The app does not use any third-party services. The only network calls are to Apple's StoreKit for in-app purchases and iCloud for data sync — both handled entirely by Apple.</p>
+		<ul class="list-disc list-inside ml-2 space-y-1">
+			<li><strong>PostHog</strong> — anonymous usage analytics (<a class="underline decoration-dotted" href="https://posthog.com/privacy">PostHog Privacy Policy</a>)</li>
+			<li><strong>Apple StoreKit</strong> — in-app purchases</li>
+			<li><strong>Apple iCloud</strong> — data sync across your devices</li>
+		</ul>
 	</div>
 
 	<div>
