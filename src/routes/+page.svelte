@@ -49,6 +49,13 @@
 		href="https://projects.byvova.com/nowar/en"
 	/>
 	<Project
+		emoji="🙈"
+		title="The Shy Dock"
+		description="A tiny macOS menu bar app that auto-hides your Dock when you're on the laptop alone and brings it back when an external monitor is connected."
+		tech={['Swift']}
+		href="https://projects.byvova.com/the-shy-dock"
+	/>
+	<Project
 		emoji="🥔"
 		title="Potato Classifier"
 		description="ML-powered app that identifies potatos. Because why not make something fun while practicing computer vision? I did engineering, my gf did computer vision part."
