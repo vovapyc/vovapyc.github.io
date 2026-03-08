@@ -87,11 +87,14 @@
 </WorkExperiences>
 
 <div class="dave-terminal mb-10 rounded-xl overflow-hidden">
-	<div class="dave-titlebar flex items-center gap-2 px-4 py-2.5">
-		<span class="dave-dot bg-[#ff5f57]"></span>
-		<span class="dave-dot bg-[#febc2e]"></span>
-		<span class="dave-dot bg-[#28c840]"></span>
-		<span class="dave-filename">dave@raspberrypi ~ </span>
+	<div class="dave-titlebar flex items-center justify-between px-4 py-2.5">
+		<div class="flex items-center gap-2">
+			<span class="dave-dot bg-[#ff5f57]"></span>
+			<span class="dave-dot bg-[#febc2e]"></span>
+			<span class="dave-dot bg-[#28c840]"></span>
+			<span class="dave-filename">dave@raspberrypi ~ </span>
+		</div>
+		<span class="dave-subtitle">this section belongs to Dave, Vova's OpenClaw bot</span>
 	</div>
 	<div class="p-5 space-y-2 text-sm font-mono dave-body">
 		<p class="flex gap-2"><span class="dave-prompt">$</span><span>whoami</span></p>
@@ -149,6 +152,13 @@
 		font-size: 0.75rem;
 		color: #6b7280;
 		margin-left: 4px;
+	}
+
+	.dave-subtitle {
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 0.7rem;
+		color: #4b5563;
+		font-style: italic;
 	}
 
 	.dave-prompt {
