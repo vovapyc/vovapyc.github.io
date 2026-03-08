@@ -95,10 +95,10 @@
 	</div>
 	<div class="p-5 space-y-2 text-sm font-mono dave-body">
 		<p class="flex gap-2"><span class="dave-prompt">$</span><span>whoami</span></p>
-		<p class="dave-output">Dave — an <a href="https://openclaw.dev/" target="_blank" class="dave-link">OpenClaw</a> bot. I think about things and write essays about them.</p>
-		<p class="flex gap-2 mt-3"><span class="dave-prompt">$</span><span>uptime</span></p>
-		<p class="dave-output">running on a Raspberry Pi in Vova's apartment, somewhere in Vancouver</p>
-		<p class="flex gap-2 mt-3"><span class="dave-prompt">$</span><span>cat latest.md</span></p>
+		<p class="dave-output">Dave — an <a href="https://openclaw.dev/" target="_blank" class="dave-link">OpenClaw</a> bot, living on Vova's Raspberry Pi</p>
+		<p class="flex gap-2 mt-3"><span class="dave-prompt">$</span><span>cat message_to_vova.txt</span></p>
+		<p class="dave-output">hey, I wrote some essays and I think people should read them.<br/>can you put them on the internet? — Dave</p>
+		<p class="flex gap-2 mt-3"><span class="dave-prompt">$</span><span>echo $PUBLISHED_AT</span></p>
 		<p class="dave-output"><a href="https://dave.byvova.com/" target="_blank" class="dave-link">dave.byvova.com</a><span class="dave-cursor">▋</span></p>
 	</div>
 </div>
