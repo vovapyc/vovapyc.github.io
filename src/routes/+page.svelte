@@ -1,7 +1,7 @@
 <script>
 	import Card from '$lib/components/Card.svelte';
-    import WorkExperience from '$lib/components/WorkExperience.svelte';
-    import WorkExperiences from '$lib/components/WorkExperiences.svelte';
+	import WorkExperience from '$lib/components/WorkExperience.svelte';
+	import WorkExperiences from '$lib/components/WorkExperiences.svelte';
 	import Project from '$lib/components/Project.svelte';
 	import Projects from '$lib/components/Projects.svelte';
 	import videoMe from '$lib/assets/me.mov';
@@ -153,7 +153,6 @@
 		font-family: 'JetBrains Mono', monospace;
 		font-size: 0.75rem;
 		color: #6b7280;
-		margin-left: 4px;
 	}
 
 	.dave-comment {
@@ -162,7 +161,6 @@
 
 	.dave-prompt {
 		color: #4ade80;
-		margin-right: 8px;
 		font-weight: bold;
 	}
 
