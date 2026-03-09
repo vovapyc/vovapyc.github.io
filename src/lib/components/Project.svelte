@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 	export let title;
 	export let emoji;
 	export let description;
-	export let tech = [];
+	export let tech: string[] = [];
 	export let href;
 </script>
 
