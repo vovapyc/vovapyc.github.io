@@ -37,8 +37,8 @@
 	<Project
 		emoji="🤖"
 		title="Vibe Buddy"
-		description="A tiny ESP32-S3 desk robot that keeps Codex and Claude Code usage limits visible while you work."
-		tech={['ESP32-S3', 'Python', 'SvelteKit']}
+		description="A small ESP32 desk robot that keeps your Codex and Claude Code usage limits visible while you work, including how much is left and when each limit resets."
+		tech={['ESP32', 'Python', 'SvelteKit']}
 		href="https://vibe-buddy.byvova.com/"
 	/>
 	<Project
