@@ -50,10 +50,10 @@
 	/>
 	<Project
 		emoji="🕊️"
-		title="Artists Boycott russia"
+		title="Played in Russia"
 		description="Public database tracking artists who perform in russia after the invasion of Ukraine. Built to help people make informed decisions about who they support."
 		tech={['SvelteKit', 'Python']}
-		href="https://projects.byvova.com/nowar/en"
+		href="https://playedinrussia.com/en"
 	/>
 	<Project
 		emoji="🙈"
