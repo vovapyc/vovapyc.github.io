@@ -6,7 +6,6 @@
 	import Projects from '$lib/components/Projects.svelte';
 	import videoMe from '$lib/assets/me.mov';
 	import Link from '$lib/components/Link.svelte';
-	import Dave from '$lib/components/Dave.svelte';
 </script>
 
 <div class="flex flex-col md:flex-row p-4 py-10">
@@ -35,6 +34,13 @@
 </Card>
 
 <Projects>
+	<Project
+		emoji="🤖"
+		title="Vibe Buddy"
+		description="A tiny ESP32-S3 desk robot that keeps Codex and Claude Code usage limits visible while you work."
+		tech={['ESP32-S3', 'Python', 'SvelteKit']}
+		href="https://vibe-buddy.byvova.com/"
+	/>
 	<Project
 		emoji="🍁"
 		title="My Days in Canada"
@@ -86,8 +92,6 @@
         <p>My stack included Python, Vue.js, AWS (S3, Lambda, EC2, Fargate, Step Functions), pandas, numpy, plot.ly and more.</p>
     </WorkExperience>
 </WorkExperiences>
-
-<Dave />
 
 <Card title="📫 Contact me">
     <p>
