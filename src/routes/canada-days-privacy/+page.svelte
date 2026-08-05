@@ -165,7 +165,7 @@
 		<h2 class="mb-2 text-xl font-semibold">Contact</h2>
 		<p>
 			Questions or privacy requests:
-			<a class="underline decoration-dotted" href="mailto:vovawed@gmail.com">vovawed@gmail.com</a>.
+			<a class="underline decoration-dotted" href="mailto:me@byvova.com">me@byvova.com</a>.
 		</p>
 	</div>
 </article>

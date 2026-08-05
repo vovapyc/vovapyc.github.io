@@ -61,6 +61,6 @@
 
 	<div>
 		<h2 class="text-xl font-semibold mb-2">Contact</h2>
-		<p>Questions? Reach out at <a class="underline decoration-dotted" href="mailto:vovawed@gmail.com">vovawed@gmail.com</a>.</p>
+		<p>Questions? Reach out at <a class="underline decoration-dotted" href="mailto:me@byvova.com">me@byvova.com</a>.</p>
 	</div>
 </article>

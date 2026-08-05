@@ -6,6 +6,22 @@
 	import Projects from '$lib/components/Projects.svelte';
 	import videoMe from '$lib/assets/me.mov';
 	import Link from '$lib/components/Link.svelte';
+
+	/** @param {Date} date */
+	function calculateAge(date) {
+		let calculatedAge = date.getFullYear() - 2000;
+
+		if (date.getMonth() === 0 && date.getDate() < 17) {
+			calculatedAge -= 1;
+		}
+
+		return calculatedAge;
+	}
+
+	/** @param {HTMLSpanElement} element */
+	function showAge(element) {
+		element.textContent = `${calculateAge(new Date())}-year-old `;
+	}
 </script>
 
 <div class="flex flex-col md:flex-row p-4 py-10">
@@ -23,13 +39,18 @@
 
 <Card title="💁‍♂️ About me">
 	<p>
-		During my career, I've built trading algorithms, architected cloud infrastructure, developed high-load services handling many requests per second, trained ML models, and built frontends
+		I'm a <span use:showAge></span><strong>software engineer</strong> from 🇺🇦, now based in 🇨🇦. I
+		hold a
+		<strong>Master's degree in Computer Science</strong> and have
+		<strong>7 years of professional experience</strong>.
 	</p>
 	<p>
-		In my free time, I build and design indie apps
+		I've worked on high-load backend services, cloud and data infrastructure, machine learning, and
+		mobile apps.
 	</p>
 	<p>
-		Also, I hold a Master's in Computer Science from Vasyl Stefanyk PNU(🇺🇦)
+		In my free time, I create projects I'm passionate about and bring them to life from idea to
+		launch. 🚀
 	</p>
 </Card>
 
@@ -39,7 +60,14 @@
 		title="Vibe Buddy"
 		description="A small ESP32 desk robot that keeps your Codex and Claude Code usage limits visible while you work, including how much is left and when each limit resets."
 		tech={['ESP32', 'Python', 'SvelteKit']}
-		href="https://vibe-buddy.byvova.com/"
+		href="https://vibe-buddy.byvova.com/?ref=byvova.com"
+	/>
+	<Project
+		emoji="🕊️"
+		title="Played in Russia"
+		description="Public database tracking artists who perform in russia after the invasion of Ukraine. Built to help people make informed decisions about who they support."
+		tech={['SvelteKit', 'Python']}
+		href="https://playedinrussia.com?ref=byvova.com"
 	/>
 	<Project
 		emoji="🍁"
@@ -49,25 +77,18 @@
 		href="https://apps.apple.com/ca/app/my-days-in-canada/id6758373830"
 	/>
 	<Project
-		emoji="🕊️"
-		title="Played in Russia"
-		description="Public database tracking artists who perform in russia after the invasion of Ukraine. Built to help people make informed decisions about who they support."
-		tech={['SvelteKit', 'Python']}
-		href="https://playedinrussia.com/en"
-	/>
-	<Project
 		emoji="🙈"
 		title="The Shy Dock"
 		description="A tiny macOS menu bar app that auto-hides your Dock when you're on the laptop alone and brings it back when an external monitor is connected."
 		tech={['Swift']}
-		href="https://projects.byvova.com/the-shy-dock"
+		href="https://projects.byvova.com/the-shy-dock/?ref=byvova.com"
 	/>
 	<Project
 		emoji="🥔"
 		title="Potato Classifier"
 		description="ML-powered app that identifies potatos. Because why not make something fun while practicing computer vision? I did engineering, my gf did computer vision part."
 		tech={['FastAPI', 'React']}
-		href="https://projects.byvova.com/potato/"
+		href="https://projects.byvova.com/potato/?ref=byvova.com"
 	/>
 </Projects>
 
@@ -98,7 +119,7 @@
         Check out my <Link href="https://x.com/pytsyuk83947">Twitter</Link> or <Link href="https://github.com/vovapyc">GitHub</Link> profile
     </p>
     <p>
-        Or can reach me via <a class="underline decoration-dotted" href="mailto:vovawed@gmail.com">vovawed@gmail.com</a>
+		Or can reach me via <a class="underline decoration-dotted" href="mailto:me@byvova.com">me@byvova.com</a>
     </p>
 
     <div slot="footer" class="hidden md:block absolute inset-0 pointer-events-none">
