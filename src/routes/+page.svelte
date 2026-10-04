@@ -161,16 +161,17 @@
 	</WorkExperience>
 	<WorkExperience company="GoBoutique (Lviv, Ukraine)" period="2019-2021" logo={goBoutiqueLogo}>
 		<p>
-			I was building trading algorithms for financial markets, ML Kubeflow pipelines, scrapping
-			data, creating chatbots.
+			I worked closely with traders to turn their market insights and hypotheses into algorithmic
+			trading strategies. This involved collecting, processing and analyzing financial data, then
+			translating trading ideas into code.
 		</p>
 		<p>
-			The most important project was developing trading algorithmic strategies using a lot of data
-			processing and analysis.
+			I also built chatbots and automated data pipelines using Kubeflow and AWS Step Functions to
+			collect and prepare data for training machine learning models.
 		</p>
 		<p>
 			My stack included Python, Vue.js, AWS (S3, Lambda, EC2, Fargate, Step Functions), pandas,
-			numpy, plot.ly and more.
+			NumPy and Plotly.
 		</p>
 	</WorkExperience>
 </WorkExperiences>
