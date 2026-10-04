@@ -118,20 +118,19 @@
 <WorkExperiences>
 	<WorkExperience
 		company="DeviantArt (Vancouver, Canada)"
-		period="2022 - present"
+		period="2022 - September 2026"
 		logo={deviantArtLogo}
 	>
 		<p>
-			I was developing high-performance APIs, designing data processing pipelines, conducting A/B
-			tests, training and deploying machine learning models, building full-stack apps and working
-			with OLAP systems.
+			I developed high-performance APIs, designed data processing pipelines, conducted A/B tests,
+			trained and deployed machine learning models, built full-stack apps and worked with OLAP
+			systems.
 		</p>
 		<p>
-			We were relying on cloud-native architecture, I was using AWS (CDK, Lambda, S3, Kinesis, SQS,
-			SNS and many other services), Grafana, Kubernetes, Next.js, Spark and many other
-			tools/technologies.
+			We relied on cloud-native architecture. I used AWS (CDK, Lambda, S3, Kinesis, SQS, SNS and
+			many other services), Grafana, Kubernetes, Next.js, Spark and many other tools/technologies.
 		</p>
-		<span>Some of my projects include:</span>
+		<span>Some of my projects included:</span>
 		<ul class="">
 			<li>
 				- Built high-load (5–8 requests per second), user-facing APIs that ran ML models to process
@@ -141,7 +140,7 @@
 				- Led the development of an A/B testing management system, serving mostly as an architect
 				while guiding a junior developer on coding and QA tasks
 			</li>
-			<li>- Developed a marketing tool that sends millions of notifications to users every week</li>
+			<li>- Developed a marketing tool that sent millions of notifications to users every week</li>
 		</ul>
 	</WorkExperience>
 	<WorkExperience
@@ -246,32 +245,34 @@
 	/* Entrance: memoji, then the handwritten line writes itself, then the name, bio and cards */
 	@media (prefers-reduced-motion: no-preference) {
 		.memoji {
-			animation: appear calc(0.8s / 1.3) cubic-bezier(0.2, 0.8, 0.2, 1) both;
+			animation: appear calc(0.8s / 1.3 / 1.2) cubic-bezier(0.2, 0.8, 0.2, 1) both;
 		}
 
 		.note {
 			mask-image: linear-gradient(90deg, #000 40%, transparent 60%);
 			mask-size: 250% 100%;
-			animation: write calc(1.1s / 1.3) ease-in-out calc(0.25s / 1.3) both;
+			animation: write calc(1.1s / 1.3 / 1.2) ease-in-out calc(0.25s / 1.3 / 1.2) both;
 		}
 
 		.note-flag {
 			display: inline-block;
-			animation: pop calc(0.5s / 1.3) cubic-bezier(0.3, 1.6, 0.5, 1) calc(1.2s / 1.3) both;
+			animation: pop calc(0.5s / 1.3 / 1.2) cubic-bezier(0.3, 1.6, 0.5, 1) calc(1.2s / 1.3 / 1.2)
+				both;
 		}
 
 		.word {
 			display: inline-block;
-			animation: rise calc(0.8s / 1.3) cubic-bezier(0.2, 0.8, 0.2, 1) both;
-			animation-delay: calc((0.45s + var(--i) * 0.12s) / 1.3);
+			animation: rise calc(0.8s / 1.3 / 1.2) cubic-bezier(0.2, 0.8, 0.2, 1) both;
+			animation-delay: calc((0.45s + var(--i) * 0.12s) / 1.3 / 1.2);
 		}
 
 		.bio {
-			animation: fade-up calc(0.7s / 1.3) ease-out calc(0.95s / 1.3) both;
+			animation: fade-up calc(0.7s / 1.3 / 1.2) ease-out calc(0.95s / 1.3 / 1.2) both;
 		}
 
 		.intro + :global(.card) {
-			animation: settle calc(0.9s / 1.3) cubic-bezier(0.2, 0.8, 0.2, 1) calc(1.15s / 1.3) both;
+			animation: settle calc(0.9s / 1.3 / 1.2) cubic-bezier(0.2, 0.8, 0.2, 1)
+				calc(1.15s / 1.3 / 1.2) both;
 		}
 	}
 
