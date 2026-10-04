@@ -152,13 +152,18 @@
 		monochrome
 	>
 		<p>
-			I was working on email spam detection system for Talos, Cisco's cyber security platform. I was
-			writing documentation, working with Kubernetes, email protocols, Python, PostgreSQL, Redis and
-			other tools.
+			Our team worked on email spam detection for Cisco Talos, <Link
+				href="https://www.cisco.com/site/us/en/products/security/talos/index.html"
+				>Cisco’s threat intelligence team</Link
+			>.
 		</p>
 		<p>
-			During my work there I built high-load, cached API for processing and translating email
-			messages.
+			I built a cached translation API designed to handle large volumes of email, translating
+			message content to help the system identify spam.
+		</p>
+		<p>
+			I wrote extensive technical documentation and worked with Python, Kubernetes, PostgreSQL,
+			Redis and email protocols.
 		</p>
 	</WorkExperience>
 	<WorkExperience
