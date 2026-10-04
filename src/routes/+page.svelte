@@ -81,18 +81,21 @@
 </div>
 
 <Projects>
-	<Project
-		emoji="🤖"
-		title="Vibe Buddy"
-		description="A small ESP32 desk robot that keeps your Codex and Claude Code usage limits visible while you work, including how much is left and when each limit resets."
-		href="https://vibebuddy.sh/?ref=byvova.com"
-	/>
-	<Project
-		emoji="🕊️"
-		title="Played in Russia"
-		description="Public database tracking artists who perform in russia after the invasion of Ukraine. Built to help people make informed decisions about who they support."
-		href="https://playedinrussia.com?ref=byvova.com"
-	/>
+	<Project emoji="🤖" title="Vibe Buddy" href="https://vibebuddy.sh/?ref=byvova.com">
+		A desktop robot that shows usage limits for AI coding tools like Claude Code and Codex, and lets
+		you know when they’re working or finished. I started it as a hobby project with
+		<Link inline href="https://github.com/aalizelau">Alize</Link>. It ranked #6 on
+		<Link inline href="https://www.producthunt.com/products/vibe-buddy">Product Hunt</Link>’s daily
+		leaderboard.
+	</Project>
+	<Project emoji="🕊️" title="Played in Russia" href="https://playedinrussia.com?ref=byvova.com">
+		Public database tracking artists who perform in russia after the invasion of Ukraine. This is a
+		personal project: I enjoy going to concerts and believe in sanctions and boycotts against
+		countries that disregard the international order and invade others. My
+		<Link inline href="https://www.reddit.com/r/UkrainianConflict/s/pmMK7rpAga">Reddit post</Link>
+		about it reached 100,000 views, and the project was featured in
+		<Link inline href="https://www.neformat.com.ua/ru/node/28224">Ukrainian</Link> and European media.
+	</Project>
 	<Project
 		emoji="🍁"
 		title="My Days in Canada"
@@ -109,9 +112,12 @@
 		<Project
 			emoji="🥔"
 			title="Potato Classifier"
-			description="ML-powered app that identifies potatos. Because why not make something fun while practicing computer vision? I did engineering, my gf did computer vision part."
 			href="https://projects.byvova.com/potato/?ref=byvova.com"
-		/>
+		>
+			ML-powered app that identifies potatoes. Because why not make something fun while practicing
+			computer vision? I handled the engineering, while
+			<Link inline href="https://github.com/aalizelau">Alize</Link> worked on computer vision.
+		</Project>
 	</div>
 </Projects>
 
@@ -185,7 +191,7 @@
 
 <Card title="📫 Contact me">
 	<p>
-		Check out my <Link href="https://x.com/pytsyuk83947">Twitter</Link> or <Link
+		Check out my <Link href="https://x.com/vovawed">Twitter</Link> or <Link
 			href="https://github.com/vovapyc">GitHub</Link
 		> profile
 	</p>
