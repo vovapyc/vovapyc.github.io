@@ -6,41 +6,27 @@
 	import Projects from '$lib/components/Projects.svelte';
 	import videoMe from '$lib/assets/me.mov';
 	import Link from '$lib/components/Link.svelte';
-
-	/** @param {Date} date */
-	function calculateAge(date) {
-		let calculatedAge = date.getFullYear() - 2000;
-
-		if (date.getMonth() === 0 && date.getDate() < 17) {
-			calculatedAge -= 1;
-		}
-
-		return calculatedAge;
-	}
-
-	/** @param {HTMLSpanElement} element */
-	function showAge(element) {
-		element.textContent = `${calculateAge(new Date())}-year-old`;
-	}
 </script>
 
 <div class="intro flex flex-col md:flex-row md:items-center gap-6 md:gap-4 p-4 pt-12 pb-16">
 	<div class="shrink-0 md:-ml-8">
-		<video class="memoji w-60 md:w-[300px]" autoplay muted playsinline src={videoMe} width="300"></video>
+		<video class="memoji w-60 md:w-[300px]" autoplay muted playsinline src={videoMe} width="300"
+		></video>
 	</div>
 	<div>
 		<p class="note">
 			Builder from Vancouver <span class="note-flag">🇨🇦</span>
 		</p>
 		<h1 class="name" aria-label="Hi, I'm Vova">
-			{#each ['Hi,', "I'm", 'Vova'] as word, i}<span class="word" style="--i: {i}" aria-hidden="true"
-					>{word}</span
+			{#each ['Hi,', "I'm", 'Vova'] as word, i}<span
+					class="word"
+					style="--i: {i}"
+					aria-hidden="true">{word}</span
 				>{' '}{/each}
 		</h1>
 		<p class="bio max-w-xl text-sm md:text-base">
-			<strong>Tech founder</strong> and <strong>software engineer</strong> for the last 7 years,
-			master's in CS. <span use:showAge>{calculateAge(new Date())}-year-old</span>, born and raised
-			in 🇺🇦, living in 🇨🇦. In my free time: snowboarding, concerts and travelling.
+			<strong>Software engineer</strong> with 7 years of experience and a master’s in CS. Born and raised
+			in 🇺🇦, based in 🇨🇦. Outside of work: snowboarding, concerts and travelling.
 		</p>
 	</div>
 </div>
@@ -79,49 +65,81 @@
 </Projects>
 
 <WorkExperiences>
-    <WorkExperience company="DeviantArt (Vancouver, Canada)" period="2022 - present">
-        <p>I was developing high-performance APIs, designing data processing pipelines, conducting A/B tests, training and deploying machine learning models, building full-stack apps and working with OLAP systems.</p>
-        <p>We were relying on cloud-native architecture, I was using AWS (CDK, Lambda, S3, Kinesis, SQS, SNS and many other services), Grafana, Kubernetes, Next.js, Spark and many other tools/technologies.</p>
-        <span>Some of my projects include:</span>
-        <ul class="">
-            <li>- Built high-load (5–8 requests per second), user-facing APIs that ran ML models to process images.</li>
-            <li>- Led the development of an A/B testing management system, serving mostly as an architect while guiding a junior developer on coding and QA tasks</li>
-            <li>- Developed a marketing tool that sends millions of notifications to users every week</li>
-        </ul>
-    </WorkExperience>
-    <WorkExperience company="SoftServe/Cisco (Gdansk, Poland)" period="2021 - 2022">
-        <p>I was working on email spam detection system for Talos, Cisco's cyber security platform. I was writing documentation, working with Kubernetes, email protocols, Python, PostgreSQL, Redis and other tools.</p>
-        <p>During my work there I built high-load, cached API for processing and translating email messages.</p>
-    </WorkExperience>
-    <WorkExperience company="GoBoutique (Lviv, Ukraine)" period="2019-2021">
-        <p>I was building trading algorithms for financial markets, ML Kubeflow pipelines, scrapping data, creating chatbots.</p>
-        <p>The most important project was developing trading algorithmic strategies using a lot of data processing and analysis.</p> 
-        <p>My stack included Python, Vue.js, AWS (S3, Lambda, EC2, Fargate, Step Functions), pandas, numpy, plot.ly and more.</p>
-    </WorkExperience>
+	<WorkExperience company="DeviantArt (Vancouver, Canada)" period="2022 - present">
+		<p>
+			I was developing high-performance APIs, designing data processing pipelines, conducting A/B
+			tests, training and deploying machine learning models, building full-stack apps and working
+			with OLAP systems.
+		</p>
+		<p>
+			We were relying on cloud-native architecture, I was using AWS (CDK, Lambda, S3, Kinesis, SQS,
+			SNS and many other services), Grafana, Kubernetes, Next.js, Spark and many other
+			tools/technologies.
+		</p>
+		<span>Some of my projects include:</span>
+		<ul class="">
+			<li>
+				- Built high-load (5–8 requests per second), user-facing APIs that ran ML models to process
+				images.
+			</li>
+			<li>
+				- Led the development of an A/B testing management system, serving mostly as an architect
+				while guiding a junior developer on coding and QA tasks
+			</li>
+			<li>- Developed a marketing tool that sends millions of notifications to users every week</li>
+		</ul>
+	</WorkExperience>
+	<WorkExperience company="SoftServe/Cisco (Gdansk, Poland)" period="2021 - 2022">
+		<p>
+			I was working on email spam detection system for Talos, Cisco's cyber security platform. I was
+			writing documentation, working with Kubernetes, email protocols, Python, PostgreSQL, Redis and
+			other tools.
+		</p>
+		<p>
+			During my work there I built high-load, cached API for processing and translating email
+			messages.
+		</p>
+	</WorkExperience>
+	<WorkExperience company="GoBoutique (Lviv, Ukraine)" period="2019-2021">
+		<p>
+			I was building trading algorithms for financial markets, ML Kubeflow pipelines, scrapping
+			data, creating chatbots.
+		</p>
+		<p>
+			The most important project was developing trading algorithmic strategies using a lot of data
+			processing and analysis.
+		</p>
+		<p>
+			My stack included Python, Vue.js, AWS (S3, Lambda, EC2, Fargate, Step Functions), pandas,
+			numpy, plot.ly and more.
+		</p>
+	</WorkExperience>
 </WorkExperiences>
 
-<Card title="📫 Contact me" reveal={false}>
-    <p>
-        Check out my <Link href="https://x.com/pytsyuk83947">Twitter</Link> or <Link href="https://github.com/vovapyc">GitHub</Link> profile
-    </p>
-    <p>
+<Card title="📫 Contact me">
+	<p>
+		Check out my <Link href="https://x.com/pytsyuk83947">Twitter</Link> or <Link
+			href="https://github.com/vovapyc">GitHub</Link
+		> profile
+	</p>
+	<p>
 		Or can reach me via <Link href="mailto:me@byvova.com">me@byvova.com</Link>
-    </p>
+	</p>
 
-    <div slot="footer" class="hidden md:block absolute inset-0 pointer-events-none">
-        <span class="emoji" style="top: -15px; right: 20px;">🧐</span>
-        <span class="emoji" style="top: 25px; right: 70px;">🍻</span>
-        <span class="emoji" style="top: 65px; right: 120px;">🙉</span>
-        <span class="emoji" style="top: 105px; right: 170px;">🗽</span>
-        <!--Second row-->
-        <span class="emoji" style="top: 40px; right: -10px;">🧳</span>
-        <span class="emoji" style="top: 80px; right: 40px;">🥳</span>
-        <span class="emoji" style="top: 120px; right: 90px;">🔥</span>
-        <span class="emoji" style="top: 105px; right: 170px;">🗽</span>
-        <!--Third row-->
-        <span class="emoji" style="top: 95px; right: -20px;">🇨🇦</span>
-        <span class="emoji" style="top: 135px; right: 30px;">🎸</span>
-      </div>
+	<div slot="footer" class="hidden md:block absolute inset-0 pointer-events-none">
+		<span class="emoji" style="top: -15px; right: 20px;">🧐</span>
+		<span class="emoji" style="top: 25px; right: 70px;">🍻</span>
+		<span class="emoji" style="top: 65px; right: 120px;">🙉</span>
+		<span class="emoji" style="top: 105px; right: 170px;">🗽</span>
+		<!--Second row-->
+		<span class="emoji" style="top: 40px; right: -10px;">🧳</span>
+		<span class="emoji" style="top: 80px; right: 40px;">🥳</span>
+		<span class="emoji" style="top: 120px; right: 90px;">🔥</span>
+		<span class="emoji" style="top: 105px; right: 170px;">🗽</span>
+		<!--Third row-->
+		<span class="emoji" style="top: 95px; right: -20px;">🇨🇦</span>
+		<span class="emoji" style="top: 135px; right: 30px;">🎸</span>
+	</div>
 </Card>
 
 <style>
@@ -195,16 +213,6 @@
 		.intro + :global(.card) {
 			animation: settle 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) 1.15s both;
 		}
-
-		/* Later cards rise in as they scroll into view, where the browser supports it */
-		@supports (animation-timeline: view()) {
-			:global(.card + .card.reveal) {
-				animation: settle linear both;
-				animation-timeline: view();
-				animation-range: entry 0% entry 200px;
-			}
-		}
-
 	}
 
 	@keyframes appear {
