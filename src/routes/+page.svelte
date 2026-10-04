@@ -6,6 +6,9 @@
 	import Projects from '$lib/components/Projects.svelte';
 	import videoMe from '$lib/assets/me.mov';
 	import Link from '$lib/components/Link.svelte';
+	import deviantArtLogo from '$lib/assets/companies/deviantart.svg';
+	import softServeLogo from '$lib/assets/companies/softserve.svg';
+	import goBoutiqueLogo from '$lib/assets/companies/goboutique.png';
 </script>
 
 <div class="intro flex flex-col md:flex-row md:items-center gap-6 md:gap-4 p-4 pt-12 pb-16">
@@ -50,22 +53,28 @@
 		description="iOS app to track physical presence in Canada for citizenship eligibility, log trips, and optionally scan photos for travel dates — all data stays on-device/iCloud."
 		href="https://apps.apple.com/ca/app/my-days-in-canada/id6758373830"
 	/>
-	<Project
-		emoji="🙈"
-		title="The Shy Dock"
-		description="A tiny macOS menu bar app that auto-hides your Dock when you're on the laptop alone and brings it back when an external monitor is connected."
-		href="https://projects.byvova.com/the-shy-dock/?ref=byvova.com"
-	/>
-	<Project
-		emoji="🥔"
-		title="Potato Classifier"
-		description="ML-powered app that identifies potatos. Because why not make something fun while practicing computer vision? I did engineering, my gf did computer vision part."
-		href="https://projects.byvova.com/potato/?ref=byvova.com"
-	/>
+	<div slot="more" class="space-y-6">
+		<Project
+			emoji="🙈"
+			title="The Shy Dock"
+			description="A tiny macOS menu bar app that auto-hides your Dock when you're on the laptop alone and brings it back when an external monitor is connected."
+			href="https://projects.byvova.com/the-shy-dock/?ref=byvova.com"
+		/>
+		<Project
+			emoji="🥔"
+			title="Potato Classifier"
+			description="ML-powered app that identifies potatos. Because why not make something fun while practicing computer vision? I did engineering, my gf did computer vision part."
+			href="https://projects.byvova.com/potato/?ref=byvova.com"
+		/>
+	</div>
 </Projects>
 
 <WorkExperiences>
-	<WorkExperience company="DeviantArt (Vancouver, Canada)" period="2022 - present">
+	<WorkExperience
+		company="DeviantArt (Vancouver, Canada)"
+		period="2022 - present"
+		logo={deviantArtLogo}
+	>
 		<p>
 			I was developing high-performance APIs, designing data processing pipelines, conducting A/B
 			tests, training and deploying machine learning models, building full-stack apps and working
@@ -89,7 +98,11 @@
 			<li>- Developed a marketing tool that sends millions of notifications to users every week</li>
 		</ul>
 	</WorkExperience>
-	<WorkExperience company="SoftServe/Cisco (Gdansk, Poland)" period="2021 - 2022">
+	<WorkExperience
+		company="SoftServe/Cisco (Gdansk, Poland)"
+		period="2021 - 2022"
+		logo={softServeLogo}
+	>
 		<p>
 			I was working on email spam detection system for Talos, Cisco's cyber security platform. I was
 			writing documentation, working with Kubernetes, email protocols, Python, PostgreSQL, Redis and
@@ -100,7 +113,7 @@
 			messages.
 		</p>
 	</WorkExperience>
-	<WorkExperience company="GoBoutique (Lviv, Ukraine)" period="2019-2021">
+	<WorkExperience company="GoBoutique (Lviv, Ukraine)" period="2019-2021" logo={goBoutiqueLogo}>
 		<p>
 			I was building trading algorithms for financial markets, ML Kubeflow pipelines, scrapping
 			data, creating chatbots.
@@ -186,32 +199,32 @@
 	/* Entrance: memoji, then the handwritten line writes itself, then the name, bio and cards */
 	@media (prefers-reduced-motion: no-preference) {
 		.memoji {
-			animation: appear 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+			animation: appear calc(0.8s / 1.3) cubic-bezier(0.2, 0.8, 0.2, 1) both;
 		}
 
 		.note {
 			mask-image: linear-gradient(90deg, #000 40%, transparent 60%);
 			mask-size: 250% 100%;
-			animation: write 1.1s ease-in-out 0.25s both;
+			animation: write calc(1.1s / 1.3) ease-in-out calc(0.25s / 1.3) both;
 		}
 
 		.note-flag {
 			display: inline-block;
-			animation: pop 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) 1.2s both;
+			animation: pop calc(0.5s / 1.3) cubic-bezier(0.3, 1.6, 0.5, 1) calc(1.2s / 1.3) both;
 		}
 
 		.word {
 			display: inline-block;
-			animation: rise 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
-			animation-delay: calc(0.45s + var(--i) * 0.12s);
+			animation: rise calc(0.8s / 1.3) cubic-bezier(0.2, 0.8, 0.2, 1) both;
+			animation-delay: calc((0.45s + var(--i) * 0.12s) / 1.3);
 		}
 
 		.bio {
-			animation: fade-up 0.7s ease-out 0.95s both;
+			animation: fade-up calc(0.7s / 1.3) ease-out calc(0.95s / 1.3) both;
 		}
 
 		.intro + :global(.card) {
-			animation: settle 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) 1.15s both;
+			animation: settle calc(0.9s / 1.3) cubic-bezier(0.2, 0.8, 0.2, 1) calc(1.15s / 1.3) both;
 		}
 	}
 
