@@ -9,15 +9,15 @@
 </script>
 
 <div class="intro flex flex-col md:flex-row md:items-center gap-6 md:gap-4 p-4 pt-12 pb-16">
-	<div class="shrink-0 md:-ml-8">
+	<div class="shrink-0 self-center md:-ml-8">
 		<video class="memoji w-60 md:w-[300px]" autoplay muted playsinline src={videoMe} width="300"
 		></video>
 	</div>
 	<div>
-		<p class="note">
+		<p class="note mx-auto md:mx-0">
 			Builder from Vancouver <span class="note-flag">🇨🇦</span>
 		</p>
-		<h1 class="name" aria-label="Hi, I'm Vova">
+		<h1 class="name text-center md:text-left" aria-label="Hi, I'm Vova">
 			{#each ['Hi,', "I'm", 'Vova'] as word, i}<span
 					class="word"
 					style="--i: {i}"
