@@ -123,26 +123,20 @@
 		logo={deviantArtLogo}
 	>
 		<p>
-			I developed high-performance APIs, designed data processing pipelines, conducted A/B tests,
-			trained and deployed machine learning models, built full-stack apps and worked with OLAP
-			systems.
+			I developed APIs and data pipelines, ran A/B tests, trained and deployed machine learning
+			models, built full-stack apps and worked with OLAP systems. My stack included AWS (CDK,
+			Lambda, S3, Kinesis, SQS, SNS and Step Functions), Grafana, Kubernetes and Next.js.
 		</p>
 		<p>
-			We relied on cloud-native architecture. I used AWS (CDK, Lambda, S3, Kinesis, SQS, SNS and
-			many other services), Grafana, Kubernetes, Next.js, Spark and many other tools/technologies.
+			I guided a junior developer on an A/B testing management project, designing the system’s
+			architecture and supporting their implementation and QA work.
 		</p>
-		<span>Some of my projects included:</span>
-		<ul class="">
-			<li>
-				- Built high-load (5–8 requests per second), user-facing APIs that ran ML models to process
-				images.
-			</li>
-			<li>
-				- Led the development of an A/B testing management system, serving mostly as an architect
-				while guiding a junior developer on coding and QA tasks
-			</li>
-			<li>- Developed a marketing tool that sent millions of notifications to users every week</li>
-		</ul>
+		<p>
+			I independently led and built a high-load replacement for the legacy pipeline that processed
+			every image upload and updates to files, descriptions and other content. I also developed
+			image-processing APIs that ran ML models at 5–8 requests per second. I developed and led an
+			internal marketing tool that sent millions of notifications to users each week.
+		</p>
 	</WorkExperience>
 	<WorkExperience
 		company="SoftServe/Cisco"
@@ -153,6 +147,7 @@
 	>
 		<p>
 			Our team worked on email spam detection for Cisco Talos, <Link
+				inline
 				href="https://www.cisco.com/site/us/en/products/security/talos/index.html"
 				>Cisco’s threat intelligence team</Link
 			>.
