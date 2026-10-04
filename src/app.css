@@ -1,9 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..600,100,0&family=Geist:wght@400..600&family=Geist+Mono:wght@400&display=swap');
+/* Caveat is only used for the handwritten line on the homepage, so it loads just those letters.
+   If that line changes, update `text=` with the new wording. */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&text=Builder%20from%20Vancouver&display=swap');
 
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin "daisyui";
 
+@theme {
+	--font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
+	--font-serif: 'Fraunces', ui-serif, Georgia, serif;
+	--font-mono: 'Geist Mono', ui-monospace, monospace;
+}
+
 body {
-    font-family: "JetBrains Mono", monospace;
-    font-optical-sizing: auto;
+	font-family: var(--font-sans);
+	font-optical-sizing: auto;
+}
+
+strong {
+	font-weight: 600;
 }

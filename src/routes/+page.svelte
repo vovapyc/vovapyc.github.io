@@ -20,74 +20,60 @@
 
 	/** @param {HTMLSpanElement} element */
 	function showAge(element) {
-		element.textContent = `${calculateAge(new Date())}-year-old `;
+		element.textContent = `${calculateAge(new Date())}-year-old`;
 	}
 </script>
 
-<div class="flex flex-col md:flex-row p-4 py-10">
-	<div class="basis-1/3 self-center">
-		<video autoplay muted playsinline src={videoMe} width="200"></video>
+<div class="intro flex flex-col md:flex-row md:items-center gap-6 md:gap-4 p-4 pt-12 pb-16">
+	<div class="shrink-0 md:-ml-8">
+		<video class="memoji w-60 md:w-[300px]" autoplay muted playsinline src={videoMe} width="300"></video>
 	</div>
-	<div class="basis-2/3 self-center">
-		<h1 class="text-2xl font-black leading-loose">👋🏻 Hi, I'm Vova</h1>
-		<p class="text-sm md:text-base leading-relaxed">
-			🇨🇦 Based in Vancouver
-			<br />Work for DeviantArt, ship my own projects
+	<div>
+		<p class="note">
+			Builder from Vancouver <span class="note-flag">🇨🇦</span>
+		</p>
+		<h1 class="name" aria-label="Hi, I'm Vova">
+			{#each ['Hi,', "I'm", 'Vova'] as word, i}<span class="word" style="--i: {i}" aria-hidden="true"
+					>{word}</span
+				>{' '}{/each}
+		</h1>
+		<p class="bio max-w-xl text-sm md:text-base">
+			<strong>Tech founder</strong> and <strong>software engineer</strong> for the last 7 years,
+			master's in CS. <span use:showAge>{calculateAge(new Date())}-year-old</span>, born and raised
+			in 🇺🇦, living in 🇨🇦. In my free time: snowboarding, concerts and travelling.
 		</p>
 	</div>
 </div>
-
-<Card title="💁‍♂️ About me">
-	<p>
-		I'm a <span use:showAge></span><strong>software engineer</strong> from 🇺🇦, now based in 🇨🇦. I
-		hold a
-		<strong>Master's degree in Computer Science</strong> and have
-		<strong>7 years of professional experience</strong>.
-	</p>
-	<p>
-		I've worked on high-load backend services, cloud and data infrastructure, machine learning, and
-		mobile apps.
-	</p>
-	<p>
-		In my free time, I create projects I'm passionate about and bring them to life from idea to
-		launch. 🚀
-	</p>
-</Card>
 
 <Projects>
 	<Project
 		emoji="🤖"
 		title="Vibe Buddy"
 		description="A small ESP32 desk robot that keeps your Codex and Claude Code usage limits visible while you work, including how much is left and when each limit resets."
-		tech={['ESP32', 'Python', 'SvelteKit']}
-		href="https://vibe-buddy.byvova.com/?ref=byvova.com"
+		href="https://vibebuddy.sh/?ref=byvova.com"
 	/>
 	<Project
 		emoji="🕊️"
 		title="Played in Russia"
 		description="Public database tracking artists who perform in russia after the invasion of Ukraine. Built to help people make informed decisions about who they support."
-		tech={['SvelteKit', 'Python']}
 		href="https://playedinrussia.com?ref=byvova.com"
 	/>
 	<Project
 		emoji="🍁"
 		title="My Days in Canada"
 		description="iOS app to track physical presence in Canada for citizenship eligibility, log trips, and optionally scan photos for travel dates — all data stays on-device/iCloud."
-		tech={['Swift']}
 		href="https://apps.apple.com/ca/app/my-days-in-canada/id6758373830"
 	/>
 	<Project
 		emoji="🙈"
 		title="The Shy Dock"
 		description="A tiny macOS menu bar app that auto-hides your Dock when you're on the laptop alone and brings it back when an external monitor is connected."
-		tech={['Swift']}
 		href="https://projects.byvova.com/the-shy-dock/?ref=byvova.com"
 	/>
 	<Project
 		emoji="🥔"
 		title="Potato Classifier"
 		description="ML-powered app that identifies potatos. Because why not make something fun while practicing computer vision? I did engineering, my gf did computer vision part."
-		tech={['FastAPI', 'React']}
 		href="https://projects.byvova.com/potato/?ref=byvova.com"
 	/>
 </Projects>
@@ -114,12 +100,12 @@
     </WorkExperience>
 </WorkExperiences>
 
-<Card title="📫 Contact me">
+<Card title="📫 Contact me" reveal={false}>
     <p>
         Check out my <Link href="https://x.com/pytsyuk83947">Twitter</Link> or <Link href="https://github.com/vovapyc">GitHub</Link> profile
     </p>
     <p>
-		Or can reach me via <a class="underline decoration-dotted" href="mailto:me@byvova.com">me@byvova.com</a>
+		Or can reach me via <Link href="mailto:me@byvova.com">me@byvova.com</Link>
     </p>
 
     <div slot="footer" class="hidden md:block absolute inset-0 pointer-events-none">
@@ -143,5 +129,140 @@
 		position: absolute;
 		font-size: 2.6rem;
 		pointer-events: none;
+	}
+
+	.note {
+		width: fit-content;
+		font-family: 'Caveat', cursive;
+		font-size: 1.5rem;
+		line-height: 1.2;
+		color: #737373;
+		rotate: -2deg;
+		transform-origin: left center;
+	}
+
+	.note-flag {
+		margin-inline: 0.1em 0.15em;
+		font-size: 0.8em;
+	}
+
+	.name {
+		margin: 0.375rem 0 1.25rem;
+		font-family: 'Fraunces', Georgia, serif;
+		font-size: clamp(3.25rem, 8vw, 4.75rem);
+		font-weight: 400;
+		line-height: 1;
+		letter-spacing: -0.03em;
+		font-variation-settings: 'opsz' 144;
+	}
+
+	.bio {
+		line-height: 1.7;
+		color: #525252;
+	}
+
+	.bio strong {
+		color: #18181b;
+	}
+
+	/* Entrance: memoji, then the handwritten line writes itself, then the name, bio and cards */
+	@media (prefers-reduced-motion: no-preference) {
+		.memoji {
+			animation: appear 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+		}
+
+		.note {
+			mask-image: linear-gradient(90deg, #000 40%, transparent 60%);
+			mask-size: 250% 100%;
+			animation: write 1.1s ease-in-out 0.25s both;
+		}
+
+		.note-flag {
+			display: inline-block;
+			animation: pop 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) 1.2s both;
+		}
+
+		.word {
+			display: inline-block;
+			animation: rise 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+			animation-delay: calc(0.45s + var(--i) * 0.12s);
+		}
+
+		.bio {
+			animation: fade-up 0.7s ease-out 0.95s both;
+		}
+
+		.intro + :global(.card) {
+			animation: settle 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) 1.15s both;
+		}
+
+		/* Later cards rise in as they scroll into view, where the browser supports it */
+		@supports (animation-timeline: view()) {
+			:global(.card + .card.reveal) {
+				animation: settle linear both;
+				animation-timeline: view();
+				animation-range: entry 0% entry 200px;
+			}
+		}
+
+	}
+
+	@keyframes appear {
+		from {
+			opacity: 0;
+			scale: 0.9;
+		}
+	}
+
+	@keyframes write {
+		from {
+			mask-position: 100% 0;
+		}
+		to {
+			mask-position: 0 0;
+		}
+	}
+
+	@keyframes pop {
+		from {
+			scale: 0;
+		}
+	}
+
+	@keyframes rise {
+		from {
+			opacity: 0;
+			translate: 0 0.3em;
+			filter: blur(10px);
+		}
+	}
+
+	@keyframes fade-up {
+		from {
+			opacity: 0;
+			translate: 0 8px;
+		}
+	}
+
+	@keyframes -global-settle {
+		from {
+			opacity: 0;
+			translate: 0 32px;
+			scale: 0.98;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.note {
+			color: #9a9a9a;
+		}
+
+		.bio {
+			color: #c4c4c4;
+		}
+
+		.bio strong {
+			color: #e8e8e8;
+		}
 	}
 </style>
