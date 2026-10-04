@@ -6,9 +6,11 @@
 	export let monochrome = false;
 </script>
 
-<div class="flex gap-4 items-start mb-8 last:mb-0">
+<div
+	class="grid grid-cols-[auto_1fr] gap-x-3 gap-y-3 items-center mb-8 last:mb-0 md:flex md:gap-4 md:items-start"
+>
 	<img
-		class="company-logo mt-1"
+		class="company-logo md:mt-1"
 		class:monochrome
 		src={logo}
 		alt=""
@@ -16,12 +18,14 @@
 		height="44"
 		loading="lazy"
 	/>
-	<div class="flex-1 min-w-0">
-		<h3 class="font-serif font-semibold text-[1.1875rem] tracking-[-0.01em] mb-1">{company}</h3>
-		<p class="font-mono text-xs md:text-sm text-gray-500 dark:text-gray-400 mb-3">
-			<span class="whitespace-nowrap">{period}</span>{#if location}{' · '}{location}{/if}
-		</p>
-		<div class="text-sm md:text-base leading-relaxed space-y-3">
+	<div class="contents md:block md:flex-1 md:min-w-0">
+		<div class="min-w-0">
+			<h3 class="font-serif font-semibold text-[1.1875rem] tracking-[-0.01em] mb-1">{company}</h3>
+			<p class="font-mono text-xs md:text-sm text-gray-500 dark:text-gray-400 md:mb-3">
+				<span class="whitespace-nowrap">{period}</span>{#if location}{' · '}{location}{/if}
+			</p>
+		</div>
+		<div class="col-span-2 text-sm md:text-base leading-relaxed space-y-3">
 			<slot />
 		</div>
 	</div>
