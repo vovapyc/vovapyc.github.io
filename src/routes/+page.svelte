@@ -1,20 +1,66 @@
 <script>
+	import { onMount } from 'svelte';
 	import Card from '$lib/components/Card.svelte';
 	import WorkExperience from '$lib/components/WorkExperience.svelte';
 	import WorkExperiences from '$lib/components/WorkExperiences.svelte';
 	import Project from '$lib/components/Project.svelte';
 	import Projects from '$lib/components/Projects.svelte';
-	import videoMe from '$lib/assets/me.mov';
+	import videoMe from '$lib/assets/me.mp4';
+	import videoMeWebm from '$lib/assets/me.webm';
+	import videoPoster from '$lib/assets/me-poster.webp';
 	import Link from '$lib/components/Link.svelte';
 	import deviantArtLogo from '$lib/assets/companies/deviantart.svg';
 	import softServeLogo from '$lib/assets/companies/softserve.svg';
 	import goBoutiqueLogo from '$lib/assets/companies/goboutique.png';
+
+	let playVideo = false;
+
+	onMount(() => {
+		const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+		const updateMotion = () => {
+			playVideo = !reducedMotion.matches;
+		};
+		updateMotion();
+		reducedMotion.addEventListener('change', updateMotion);
+		return () => reducedMotion.removeEventListener('change', updateMotion);
+	});
 </script>
 
 <div class="intro flex flex-col md:flex-row md:items-center gap-6 md:gap-4 p-4 pt-12 pb-16">
 	<div class="shrink-0 self-center md:-ml-8">
-		<video class="memoji w-60 md:w-[300px]" autoplay muted playsinline src={videoMe} width="300"
-		></video>
+		<div class="memoji w-60 md:w-[300px] aspect-square">
+			{#if playVideo}
+				<video
+					class="block w-full h-full"
+					autoplay
+					muted
+					playsinline
+					preload="metadata"
+					poster={videoPoster}
+					width="512"
+					height="512"
+					aria-hidden="true"
+					on:error={() => (playVideo = false)}
+				>
+					<source src={videoMe} type={'video/mp4; codecs="hvc1"'} />
+					<source
+						src={videoMeWebm}
+						type={'video/webm; codecs="vp9"'}
+						on:error={() => (playVideo = false)}
+					/>
+				</video>
+			{:else}
+				<img
+					class="block w-full h-full"
+					src={videoPoster}
+					alt=""
+					width="512"
+					height="512"
+					decoding="async"
+					fetchpriority="high"
+				/>
+			{/if}
+		</div>
 	</div>
 	<div>
 		<p class="note mx-auto md:mx-0">
@@ -102,6 +148,7 @@
 		company="SoftServe/Cisco (Gdansk, Poland)"
 		period="2021 - 2022"
 		logo={softServeLogo}
+		monochrome
 	>
 		<p>
 			I was working on email spam detection system for Talos, Cisco's cyber security platform. I was
