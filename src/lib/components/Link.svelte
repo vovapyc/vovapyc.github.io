@@ -1,10 +1,15 @@
 <script>
 	export let href;
+	export let inline = false;
 
 	$: external = href.startsWith('http');
 </script>
 
-<a target={external ? '_blank' : undefined} {href} class="keycap font-mono">
+<a
+	target={external ? '_blank' : undefined}
+	{href}
+	class={inline ? 'underline underline-offset-2 hover:opacity-80' : 'keycap font-mono'}
+>
 	<slot />
 </a>
 
