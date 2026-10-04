@@ -117,8 +117,9 @@
 
 <WorkExperiences>
 	<WorkExperience
-		company="DeviantArt (Vancouver, Canada)"
+		company="DeviantArt"
 		period="2022 - 2026"
+		location="Vancouver, Canada"
 		logo={deviantArtLogo}
 	>
 		<p>
@@ -144,8 +145,9 @@
 		</ul>
 	</WorkExperience>
 	<WorkExperience
-		company="SoftServe/Cisco (Gdansk, Poland)"
+		company="SoftServe/Cisco"
 		period="2021 - 2022"
+		location="Gdansk, Poland"
 		logo={softServeLogo}
 		monochrome
 	>
@@ -159,7 +161,12 @@
 			messages.
 		</p>
 	</WorkExperience>
-	<WorkExperience company="GoBoutique (Lviv, Ukraine)" period="2019-2021" logo={goBoutiqueLogo}>
+	<WorkExperience
+		company="GoBoutique"
+		period="2019 - 2021"
+		location="Lviv, Ukraine"
+		logo={goBoutiqueLogo}
+	>
 		<p>
 			I worked closely with traders to turn their market insights and hypotheses into algorithmic
 			trading strategies. This involved collecting, processing and analyzing financial data, then
