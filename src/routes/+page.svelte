@@ -118,7 +118,7 @@
 <WorkExperiences>
 	<WorkExperience
 		company="DeviantArt (Vancouver, Canada)"
-		period="2022 - September 2026"
+		period="2022 - 2026"
 		logo={deviantArtLogo}
 	>
 		<p>
