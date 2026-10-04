@@ -94,7 +94,12 @@
 		countries that disregard the international order and invade others. My
 		<Link inline href="https://www.reddit.com/r/UkrainianConflict/s/pmMK7rpAga">Reddit post</Link>
 		about it reached 100,000 views, and the project was featured in
-		<Link inline href="https://www.neformat.com.ua/ru/node/28224">Ukrainian</Link> and European media.
+		<Link inline href="https://www.neformat.com.ua/ru/node/28224">Ukrainian</Link> and
+		<Link
+			inline
+			href="https://www.bd.nl/tilburg/na-show-in-moskou-wordt-lny-tnz-van-decibel-gehaald-ik-zit-nu-op-de-blaren~afcb0be2/"
+			>European</Link
+		> media.
 	</Project>
 	<Project
 		emoji="🍁"
