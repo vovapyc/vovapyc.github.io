@@ -3,7 +3,7 @@
 </script>
 
 <div class="card surface mb-10 rounded-xl relative overflow-hidden">
-	<div class="card-body gap-5 p-6">
+	<div class="card-body gap-5 px-4 py-6 md:p-6">
 		<h2 class="card-title font-serif font-medium text-[1.625rem] tracking-[-0.015em]">{title}</h2>
 		<div class="text-sm md:text-base font-normal space-y-3">
 			<slot />
