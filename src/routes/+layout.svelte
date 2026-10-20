@@ -23,6 +23,10 @@
 		content="Big data, applied ML, and backend engineering. Python, AWS, FastAPI, Docker. Based in Vancouver, Canada."
 	/>
 	<meta property="og:url" content="https://vovapyc.github.io/" />
+	<!-- Absolute byvova.com URL: github.io 301s there, and crawlers may not follow the redirect for images. -->
+	<meta property="og:image" content="https://byvova.com/og.png" />
+	<meta property="og:image:alt" content="Vova Pytsiuk's memoji avatar" />
+	<meta name="twitter:card" content="summary" />
 
 	<!-- prettier-ignore -->
 	<script type="application/ld+json">
