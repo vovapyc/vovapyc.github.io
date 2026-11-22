@@ -99,7 +99,10 @@
 			inline
 			href="https://www.bd.nl/tilburg/na-show-in-moskou-wordt-lny-tnz-van-decibel-gehaald-ik-zit-nu-op-de-blaren~afcb0be2/"
 			>European</Link
-		> media.
+		> media. I also launched a <Link inline href="https://playedinrussia.com/de"
+			>German edition</Link
+		>
+		of the database.
 	</Project>
 	<Project
 		emoji="🍁"
